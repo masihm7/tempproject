@@ -1,0 +1,77 @@
+
+#poplogin {
+  background-image: url("../assets/background.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(222, 227, 230);
+  font-family: Arial, sans-serif;
+}
+#poplogin .containerlogin {
+  width: 400px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: rgba(22, 27, 36, 0.818)
+}
+
+#poplogin h2 {
+  text-align: center;
+  /* color: #ffffff; White text for the heading */
+}
+
+#poplogin .inputgroup {
+  margin-bottom: 15px;
+}
+
+#poplogin .inputgroup label {
+  display: block;
+  margin-bottom: 5px;
+  color: #cccccc; /* Light gray for labels */
+}
+
+#poplogin .inputgroup input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #555; /* Darker border around inputs */
+  border-radius: 4px;
+  background-color: #1e1e1e; /* Dark background for input fields */
+  color: #ffffff; /* White text inside input fields */
+}
+
+#poplogin .button {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(253, 190, 1); /* Yellow button background */
+  color: #000; /* Black text color for the button */
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+
+#poplogin .button:hover {
+  background-color: rgb(254, 203, 53) /* Slightly darker yellow on hover */
+}
+
+#poplogin .button:active {
+  transform: scale(0.98); 
+}
+
+#poplogin .link {
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#poplogin .link a {
+  color: #ffdd57; /* Yellow for link text */
+  text-decoration: none;
+}
+
+#poplogin .link a:hover {
+  text-decoration: underline;
+}

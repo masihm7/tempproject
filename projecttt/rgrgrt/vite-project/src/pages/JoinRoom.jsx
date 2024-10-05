@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import styles from '../styles/JoinRoom.module.css';
 
 const JoinRoom = () => {
-  const { token, logout } = useContext(AuthContext);
+  const { token, logout, user } = useContext(AuthContext);
   const [roomId, setRoomId] = useState("");
   const navigate = useNavigate();
 

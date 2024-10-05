@@ -6,7 +6,7 @@ const socket = io("http://localhost:8000/", {
   transports: ["websocket"],
 });
 
-const Chat = ({ roomId }) => {
+const Chat = ({ roomId, user }) => {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("");
   const chatEndRef = useRef(null); // Reference to track the end of the chat list
@@ -35,7 +35,7 @@ const Chat = ({ roomId }) => {
   const sendMessage = (event) => {
     event.preventDefault();
     if (message.trim()) {
-      socket.emit("sendMessage", { roomId, message });
+      socket.emit("sendMessage", { roomId, user, message });
       setMessage(""); // Clear the input field after sending the message
     }
   };
@@ -46,7 +46,7 @@ const Chat = ({ roomId }) => {
         <ul className={styles.list}>
           {messages.map((msg, index) => (
             <li key={index} className={styles.listItem}>
-              <strong>{msg.username}: </strong> {msg.message}
+              <strong>{msg.user}: </strong> {msg.message}
             </li>
           ))}
           <div ref={chatEndRef} /> {/* Reference to the end of the chat list */}
@@ -60,6 +60,7 @@ const Chat = ({ roomId }) => {
         <button onClick={sendMessage} className={styles.button}>
           Send
         </button>
+        <p></p>
       </div>
     </div>
   );

@@ -31,10 +31,13 @@ export const AuthProvider = ({ children }) => {
     const login = async (email, password) => {
         try {
             const res = await axios.post('http://localhost:8000/api/auth/login', { email, password });
-            const loggedInUser = { id: res.data.payload.user.id, role: res.data.payload.user.role };
+            const loggedInUser = { id: res.data.payload.user.id, role: res.data.payload.user.role, username:res.data.payload.user.username  };
             setUser(loggedInUser);
+            // console.log('This will log before the state is updated:', user);
             setToken(res.data.token);
+            // console.log('This will log before the state is updated:', user);
             return loggedInUser;
+            
         } catch (error) {
             throw new Error(error.response?.data?.message || 'Login failed');
         }

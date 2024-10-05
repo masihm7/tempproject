@@ -11,7 +11,7 @@ const CreateRoom = () => {
   const [roomId, setRoomId] = useState(""); // Add state to hold roomId
   const [alert, setAlert] = useState(null);
   const navigate = useNavigate();
-
+  console.log(user)
   const handleLogout = () => {
     logout(); 
     navigate('/'); 

@@ -15,7 +15,8 @@
   display: flex;
   padding: 1rem 1.5rem;
   width: 1400px; 
-  margin: 70px auto 0px auto; 
+  margin: auto; 
+  margin-top: 10px;
   background-color: #2c2c2c;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.75);
@@ -39,6 +40,45 @@
 #poproom .logoutButton:hover {
   background-color: rgb(252, 197, 32);
 }
+
+#poproom .createroomButton{
+  position: absolute; 
+  top: 1rem;
+  right: 6.5rem;
+  background-color: rgb(230, 176, 13);
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  z-index: 10; /* Ensure it stays on top */
+}
+
+#poproom .createroomButton:hover {
+  background-color: rgb(252, 197, 32);
+}
+
+#poproom .joinroomButton{
+  position: absolute; 
+  top: 1rem;
+  right: 6.5rem;
+  background-color: rgb(230, 176, 13);
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  z-index: 10; /* Ensure it stays on top */
+}
+
+#poproom .joinroomButton{
+  background-color: rgb(252, 197, 32);
+}
+
 
 #poproom .videoLinkForm {
   position: absolute; /* Position form */
@@ -112,4 +152,17 @@
 
 #poproom .link:hover {
   color: #c2c2c2;
+}
+
+
+::-webkit-scrollbar {
+  width: 7px; /* Adjust width if needed */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray; /* Gray thumb */
 }
